@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+        .profile-photo {
+            width: 200px; 
+            height: auto;
+            display: block;
+            margin: 0 auto; 
+        }
+
+        .header-content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Welcome to My Portfolio</h1>
+                <img src="img.png" alt="Your Photo" class="profile-photo">
+                <p>Hi, I'm Deepit Nayak, a passionate web developer with expertise in HTML, CSS, JavaScript, and more.</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="container">
+            <h2>Home</h2>
+            <p>Welcome to my personal portfolio website. Here you can find information about my skills, projects, and accomplishments.</p>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-text">
+                <p>Hi, I'm Deepit Nayak, a Computer Science student who is passionate about coding. I have a strong interest in problem-solving and enjoy tackling challenging tasks. With a keen eye for detail and a love for technology, I am constantly learning and improving my skills in web development.</p>
+                <p>Education: Currently pursuing a degree in Computer Science.</p>
+                <p>Professional Experience: While I am still a student, I have worked on various projects that have helped me hone my skills in HTML, CSS, and JavaScript. I am eager to apply my knowledge and creativity to real-world problems and collaborate with like-minded individuals.</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <h3>Amazon Clone</h3>
+                    <p>A web application that mimics the functionality and user experience of Amazon's e-commerce platform.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Courier Management</h3>
+                    <p>An application designed to manage and track the delivery of packages for a courier service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you would like to get in touch, please feel free to <a href="mailto:deepitnayak6@gmail.com" style="text-decoration: none;">email me</a> or connect with me on <a href="https://www.linkedin.com/in/deepit-nayak-4563002ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>.</p>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Deepit Nayak. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
